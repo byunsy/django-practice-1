@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block contents %}
+<div class="container">
+
+    <!-- Title row -->
+    <div class="row mt-5">
+        <div class="col-12 text-center">
+            <h1>Register for Byun Project</h1>
+        </div>
+    </div>
+
+    <!-- Form row -->
+    <div class="row mt-5 ms-5 me-5 justify-content-center">
+        <div class="col-7">
+            <form method="POST" action="."> {% csrf_token %}
+                <div class="mb-3">
+                    <label for="input_username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="input_username" name="username" placeholder="Username">
+                </div>
+                <div class="mb-3">
+                    <label for="input_email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="input_email" name="email" placeholder="Email Address">
+                </div>
+                <div class="mb-3">
+                    <label for="input_password1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="input_password1" name="password" placeholder="Password">
+                </div>
+                <div class="mb-3">
+                    <label for="input_password2" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="input_password2" name="password2" placeholder="Confirm Password">
+                </div>
+                <div class="mb-3 mt-5">
+                    <span style="color: red">{{ error }}</span>
+                </div>
+                
+                <button type="submit" class="btn btn-success mr-3">Submit</button>
+                <button type="button" class="btn btn-primary" onclick="location.href='/'">
+                    Back
+                </button>
+            </form>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
