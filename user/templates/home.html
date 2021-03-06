@@ -3,10 +3,19 @@
 {% block contents %}
 
 <div class="row mt-5 justify-content-center">
+
+    <!-- HOME TITLE -->
     <div class="col-12 text-center">
         <h1>Home</h1>
     </div>
 
+    <!-- HOME IMAGE -->
+    <div class="col-12 text-center mt-5">
+        {% load static %}
+        <img src="{% static 'images/laptop.jpg' %}" alt="Laptop Image" width="360">
+    </div>
+
+    <!-- BLOCKQUOTE -->
     <div class="col-4 mt-3">
         <blockquote class="blockquote text-center">
             <p class="mb-0">The only way to learn a new programming language is by writing programs in it.</p>
